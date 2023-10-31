@@ -1,0 +1,30 @@
+<html>
+    {% extends 'secapp/base.html '%}
+    {% load static %}
+    {% block content %}
+    <h1>STUDENT DETAILS</h1>
+        {% if stud %}
+        <table>
+            <tr>
+            <th>SNO</th>
+            <th>STUDENT NAME</th>
+            <th>STUDENT AGE</th>
+            <th>STDS</th>
+            <th>OPERATION</th>
+            </tr>
+            {% for i in stud %}
+            <tr>
+                <td>{{i.sno}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.std}}</td>
+                <td><a href="/delete/{{i.id}}" class="btn btn-danger">DELETE</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/update/{{i.id}}" class="btn btn-success">UPDATE</a></td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+    </table><br>
+    <a href="/create" class="add-user"><button type="button" class="btn btn-primary">add user</button></a>
+    {% endblock %}
+   
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+    <head></head>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'secapp/style.css'%}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <body>
+        {%block content %}
+        {%endblock%}
+    </body>
+</html>

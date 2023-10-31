@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        
+        {% extends 'secapp/base.html '%}
+        {% load static %}
+        {%block content%}
+        <h1>UPDATE</h1>
+
+        <form  method="POST" >
+        <table class="create-table">
+            <tr><td><label>SNO: </label></td>
+                <td><input type="number" name="sno" value="{{stud.sno}}"></td></tr><br>
+            <tr><td><label>NAME:</label></td>
+                <td><input type="text" name="name" value="{{stud.name}}"></td></tr><br>
+            <tr><td><label>AGE:</label></td>
+                <td><input type="number" name='age' value="{{stud.age}}"></td></tr><br>
+            <tr><td><label>STD :</label></td>
+            <td><input type="text" name="std" value="{{stud.std}}"></td></tr><br>
+           
+            {%csrf_token%}
+        </table>
+        <br>
+        <input type="submit" value="UPDATE" class="btn btn-success  create-add">
+        </form>
+        {% endblock %}
+    </body>
+
+</html>

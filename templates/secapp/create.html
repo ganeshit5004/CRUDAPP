@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends 'secapp/base.html '%}
+    {% load static %}
+    {%block content%}
+
+    <h1>ADD USER</h1>
+    <form  method="POST">
+    <table class="create-table">
+    {{form.as_table}}
+    </table>
+    {%csrf_token%}
+    <br>
+    <input type="submit" value="ADD" class="btn btn-primary create-add">
+</form>
+{% endblock %}
+</body>
+</html>
